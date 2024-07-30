@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFD700; /* Amarelo */
+    background-image: url(fundo.jpg);
   }
   
   .header {
@@ -51,15 +51,31 @@
     color: #FFFFFF;
     text-decoration: none;
     text-align: center;
-    background-color: #45a049;
+    background-color: gold;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 3.5s infinite alternate;
   }
+  
+  /* Defina a animação usando keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>LOJA STEP</h1> 
+  <h1> LOJA STEP</h1> 
 </div>
 
 <div class="product-container">
@@ -128,7 +144,7 @@
     <div class="product">
       <img src="projetor.jpg" alt="Produto 2">
       <h3>Mini Projetor</h3>
-      <p> Projetor 4K 1080P Full HD</p>
+      <p> Projetor 4K 1080P Full HD Portatil</p>
       <p>Preço: R$296,90</p>
       <a href="https://amzn.to/3KBPOuo" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -147,7 +163,7 @@
   <div>
     <div class="product">
       <img src="MemoriaRam.jpg" alt="Produto 2">
-      <h3>Memoria Mancer Dantalion Z, 8GB (1x8GB)</h3>
+      <h3>Memoria Mancer Dantalion Z, 8GB</h3>
       <p> DDR4, 3200MHz, C16, MCR-DTLZ-8GB</p>
       <p>Preço: R$174,90</p>
       <a href="https://amzn.to/4aPcu52" target="_blank" class="button">Mais Detalhes</a>
@@ -178,7 +194,7 @@
     <div class="product">
       <img src="mousepad.jpg" alt="Produto 2">
       <h3>Mouse Pad Gamer Extra Grande</h3>
-      <p> Speed Anti Derrapante Profissional Desk Pad Large Wide 90x40 - Dragão Azul</p>
+      <p> Speed Anti Derrapante 90x40 - Dragão Azul</p>
       <p>Preço: R$59,90</p>
       <a href="https://amzn.to/3KFPElu" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -188,7 +204,7 @@
     <div class="product">
       <img src="SSD2.jpg" alt="Produto 2">
       <h3>SSD Kingston NV2 1TB</h3>
-      <p> NVMe M.2 2280 (Leitura até 3500MB/s e Gravação até 2100MB/s)</p>
+      <p>(Leitura até 3500MB/s e Gravação até 2100MB/s)</p>
       <p>Preço: R$453,00</p>
       <a href="https://amzn.to/3RxUSUm" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -197,7 +213,7 @@
   <div>
     <div class="product">
       <img src="Fury memoria.jpg" alt="Produto 2">
-      <h3>Kit de Memórias HyperX Fury (2 de 8GB)</h3>
+      <h3>Kit HyperX Fury (2 de 8GB)</h3>
       <p> Kit de Memórias HyperX Fury (2 de 8GB)</p>
       <p>Preço: R$334,00</p>
       <a href="https://amzn.to/4b4UJ1K" target="_blank" class="button">Mais Detalhes</a>
@@ -208,7 +224,7 @@
     <div class="product">
       <img src="Corsair.jpg" alt="Produto 2">
       <h3>Memória de desktop Corsair Vengeance</h3>
-      <p> RGB Pro 16 GB (2 x 8 GB) DDR4 3600 (PC4-28800) C18 – Preta</p>
+      <p> RGB Pro 16 GB (2 x 8 GB) DDR4 3600 C18 – Preta</p>
       <p>Preço: R$570,00</p>
       <a href="https://amzn.to/4c5gX57" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -277,7 +293,7 @@
   <div>
     <div class="product">
       <img src="webcam.jpg" alt="Produto 2">
-      <h3>Webcam Full HD Logitech C920s</h3>
+      <h3>Logitech C920s</h3>
       <p>Gravações em Video Widescreen 1080p</p>
       <p>Preço: R$390,91</p>
       <a href="https://amzn.to/45HLeoc" target="_blank" class="button">Mais Detalhes</a>
@@ -287,8 +303,8 @@
   <div>
     <div class="product">
       <img src="mesa digitalizadora.jpg" alt="Produto 2">
-      <h3>Mesa Digitalizadora Criativa</h3>
-      <p>10" Plus Multi - MX002</p>
+      <h3>Mesa Digitalizadora</h3>
+      <p> Criativa 10" Plus Multi - MX002</p>
       <p>Preço: R$198,00</p>
       <a href="https://amzn.to/3VQIzoS" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -297,8 +313,8 @@
   <div>
     <div class="product">
       <img src="Caixa de som.jpg" alt="Produto 2">
-      <h3>JBL, Caixa de Som,</h3>
-      <p>Bluetooth, Go - Preta</p>
+      <h3>JBL</h3>
+      <p>Caixa de Som,Bluetooth Go - Preta</p>
       <p>Preço: R$167,16</p>
       <a href="https://amzn.to/4c87VV1" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -307,8 +323,8 @@
   <div>
     <div class="product">
       <img src="64gb corsair.jpg" alt="Produto 2">
-      <h3>Corsair Memória 64GB</h3>
-      <p>(2x 32GB) DDR4 3200</p>
+      <h3>Corsair Memória</h3>
+      <p>64GB (2x 32GB) DDR4 3200</p>
       <p>Preço: R$1.398,75</p>
       <a href="https://amzn.to/4bBlknq" target="_blank" class="button">Mais Detalhes</a>
     </div>
@@ -337,7 +353,7 @@
   <div>
   <div class="product">
     <img src="redragon.jpg" alt="Produto 2">
-    <h3>Teclado Mecânico Gamer Redragon </h3>
+    <h3>Teclado Redragon </h3>
     <p>RGB Switch Marrom Branco</p>
     <p>Preço: R$312,90</p>
     <a href="https://amzn.to/3LCjB6u" target="_blank" class="button">Mais Detalhes</a>
