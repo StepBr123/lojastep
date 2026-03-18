@@ -1,500 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loja Step</title>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(fundo.jpg);
-  }
-  
-  .header {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #000000; /* Preto */
-    color: #FFFFFF;
-    padding: 0.5em;
-    align-items: center;
-    
-  }
-
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 2em;
-
-  }
-
-  .product {
-    border-radius: 20px;
-    width: 200px;
-    margin: 2em;
-    border: 1px solid #000000; /* Borda preta */
-    background-color: #FFFFFF;
-    padding: 1em;
-    text-align: center;
-  }
-
-  .product2 {
-    border-radius: 1px;
-    width: 250px;
-    padding: 1em;
-    text-align: center;
-  }
-
-
-  .product img {
-    max-width: 100%;
-    height: 100px;
-  }
-
-  .button {
-    cursor: pointer;
-    border-radius: 20px;
-    display: block;
-    width: 95%;
-    padding: 0.5em;
-    margin: 1em 0;
-    background-color: #000000; /* Preto */
-    color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
-    background-color: gold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: pulse 3.5s infinite alternate;
-  }
-
-  .button2 {
-    cursor: pointer;
-    border-radius: 10px;
-    display: inline-block;
-    width: 20%;
-    padding: 0.5em;
-    margin: 1em 0;
-    background-color: #000000; /* Preto */
-    color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
-    background-color: gold;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  }
-
-  body {
-    font-family: Arial, sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #fff;
 }
 
-input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    margin: 20px 0;
-    font-size: 16px;
+.header {
+  background: #000;
+  color: #FFD700;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #FFD700;
 }
 
-  /* Defina a animação usando keyframes */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+.search-box {
+  text-align: center;
+  padding: 20px;
 }
 
+.search-box input {
+  width: 320px;
+  max-width: 85%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #FFD700;
+  background: #111;
+  color: #fff;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: #111;
+  border-radius: 15px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  border: 1px solid #FFD700;
+}
+
+.product img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.product h3 {
+  font-size: 16px;
+  color: #FFD700;
+}
+
+.price {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  background: #FFD700;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination {
+  text-align: center;
+  padding: 20px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
 </style>
 </head>
+
 <body>
 
 <div class="header">
-  <h1> LOJA STEP</h1>
-  </div>
+  <h1>LOJA STEP</h1>
 </div>
 
-
-<div class="product-container">
-  
-    <!-- Produto 1 -->
-    <div>
-      <div class="product">
-      <img src="Fifine a8.jpg" alt="Produto 1">
-      <h3>FiFine a8</h3>
-      <p>FIFINE Microfone De PC Para Jogos</p>
-      <p>Preço: R$292,99</p>
-      <a href="https://amzn.to/3x6OtIU" target="_blank" class="button">Mais Detalhes</a>
-    </div>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Buscar produto...">
 </div>
-      <!-- Produto 2 -->
-    <div>
-      <div class="product">
-      <img src="Controle Xbox.jpg" alt="Produto 2">
-      <h3>Controle Xbox</h3>
-      <p>Controle Sem Fio Xbox + Cabo USB</p>
-      <p>Preço: R$415,00</p>
-      <a href="https://amzn.to/3KxKBDZ" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-  </div>
-  <!-- Produto 3 -->
-  <div>
-    <div class="product">
-      <img src="Machenike G5 Pro.jpg" alt="Produto 2">
-      <h3>Machenike G5 Pro</h3>
-      <p>Tri-mode Switch Controller, USB/Bluetooth 5.0/2.4G</p>
-      <p>Preço: R$311,00</p>
-      <a href="https://amzn.to/42Lzmlv" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-  </div>
-  <!-- Produto 4 -->
-  <div>
-    <div class="product">
-      <img src="alexa.jpg" alt="Produto 2">
-      <h3>Echo Dot 5ª geração</h3>
-      <p> Echo Dot com o melhor som já lançado | Cor Preta</p>
-      <p>Preço: R$459,00</p>
-      <a href="https://amzn.to/45owudB" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-  </div>
-  <!-- Produto 5 -->
-  <div>
-    <div class="product">
-      <img src="fonejbl.jpg" alt="Produto 2">
-      <h3>JBL</h3>
-      <p> Fone de Ouvido in Ear, C50HI - Preto</p>
-      <p>Preço: R$53,10</p>
-      <a href="https://amzn.to/4eg9lht" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-  </div>
-  <!-- Produto 6 -->
-  <div>
-    <div class="product">
-      <img src="Fire Tv.jpg" alt="Produto 2">
-      <h3>Fire TV Stick HD</h3>
-      <p>Com controle remoto por voz com Alexa</p>
-      <p>Preço: R$332,10</p>
-      <a href="https://amzn.to/3QLo49L" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-  <!-- Produto 7 -->
-  <div>
-    <div class="product">
-      <img src="iclamper.jpg" alt="Produto 2">
-      <h3>Filtro De linha Clamper </h3>
-      <p> Energia 5 Tomadas</p>
-      <p>Preço: R$69,90</p>
-      <a href="https://amzn.to/41DtTvY" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 8 -->
-  <div>
-    <div class="product">
-      <img src="projetor.jpg" alt="Produto 2">
-      <h3>Mini Projetor</h3>
-      <p> Projetor 4K 1080P Full HD Portatil</p>
-      <p>Preço: R$287,50</p>
-      <a href="https://amzn.to/3KBPOuo" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 9 -->
-  <div>
-    <div class="product">
-      <img src="tws.jpg" alt="Produto 2">
-      <h3>TWS Philips</h3>
-      <p> Fone de ouvido sem fio TWS bluetooth, energia para 15 horas</p>
-      <p>Preço: R$139,00</p>
-      <a href="https://amzn.to/4iqUySx" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 10 -->
-  <div>
-    <div class="product">
-      <img src="MemoriaRam.jpg" alt="Produto 2">
-      <h3>Memoria Mancer Dantalion Z, 8GB</h3>
-      <p> DDR4, 3200MHz, C16, MCR-DTLZ-8GB</p>
-      <p>Preço: R$147,90</p>
-      <a href="https://amzn.to/4aPcu52" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 11 -->
-  <div>
-    <div class="product">
-      <img src="Processador.jpg" alt="Produto 2">
-      <h3>Processador AMD Ryzen 5 5500</h3>
-      <p> 100100000457BOX, Cerâmica cinza</p>
-      <p>Preço: R$590,00</p>
-      <a href="https://amzn.to/45xNUop" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 12 -->
-  <div>
-    <div class="product">
-      <img src="teclado.jpg" alt="Produto 2">
-      <h3>Teclado Mecânico Gamer Redragon Dark</h3>
-      <p> Avenger K568-2 Rgb Switch Brown Com Fio</p>
-      <p>Preço: R$349,99</p>
-      <a href="https://amzn.to/3Ky2B0O" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 13 -->
-  <div>
-    <div class="product">
-      <img src="mousepad.jpg" alt="Produto 2">
-      <h3>Mouse Pad Gamer Extra Grande</h3>
-      <p> Speed Anti Derrapante 90x40 - Dragão Azul</p>
-      <p>Preço: R$69,90</p>
-      <a href="https://amzn.to/3KFPElu" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 14 -->
-  <div>
-    <div class="product">
-      <img src="1tb2.jpg" alt="Produto 2">
-      <h3>SSD Kingston NV3</h3>
-      <p>1TB M.2 2280 NVMe SSD  | Up to 6000 MB/s | PCIe 4.0 Gen 4x4</p>
-      <p>Preço: R$420,00</p>
-      <a href="https://amzn.to/41Ff9wK" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-  <!-- Produto 15 -->
-  <div>
-    <div class="product">
-      <img src="Fury memoria.jpg" alt="Produto 2">
-      <h3>Kit HyperX Fury (2 de 8GB)</h3>
-      <p> Kit de Memórias HyperX Fury (2 de 8GB)</p>
-      <p>Preço: R$334,99</p>
-      <a href="https://amzn.to/4b4UJ1K" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 16 -->
-  <div>
-    <div class="product">
-      <img src="Corsair.jpg" alt="Produto 2">
-      <h3>Memória de desktop Corsair Vengeance</h3>
-      <p> RGB Pro 16 GB (2 x 8 GB) DDR4 3600 C18 – Preta</p>
-      <p>Preço: R$549,00</p>
-      <a href="https://amzn.to/4c5gX57" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 17 -->
-  <div>
-    <div class="product">
-      <img src="Placa mãe.jpg" alt="Produto 2">
-      <h3>Placa Mãe Gigabyte B550M AORUS Elite</h3>
-      <p> Chipset B550, AMD AM4, mATX, DDR4</p>
-      <p>Preço: R$929,90</p>
-      <a href="https://amzn.to/4cqVKSW" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 18 -->
-  <div>
-    <div class="product">
-      <img src="Fonte.jpg" alt="Produto 2">
-      <h3>Fonte Modular Gamemax</h3>
-      <p> Gx650 650w 80 Plus Gold Preta</p>
-      <p>Preço: R$424,90</p>
-      <a href="https://amzn.to/4c4T5i0" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 19 -->
-  <div>
-    <div class="product">
-      <img src="Mouse.jpg" alt="Produto 2">
-      <h3>Mouse Gamer Sem Fio Logitech G PRO</h3>
-      <p> Wireless com Tecnologia LIGHTSPEED</p>
-      <p>Preço: R$609,00</p>
-      <a href="https://amzn.to/4cuWnur" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 20 -->
-  <div>
-    <div class="product">
-      <img src="qk6.jpg" alt="Produto 2">
-      <h3>Fone QKZ AK6 </h3>
-      <p>  Retorno de palco, celular, estudo - Qualidade de som - Cor Preto</p>
-      <p>Preço: R$29,00</p>
-      <a href="https://amzn.to/3VtKazn" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 21 -->
-  <div>
-    <div class="product">
-      <img src="Monitor.jpg" alt="Produto 2">
-      <h3>Monitor Gamer AOC Hero 24" </h3>
-      <p>165Hz 1ms Ajuste de Altura 24G2S/BK</p>
-      <p>Preço: R$1.088,00</p>
-      <a href="https://amzn.to/3Xu3eQC" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 22 -->
-  <div>
-    <div class="product">
-      <img src="32gb.jpg" alt="Produto 2">
-      <h3>Corsair VENGEANCE</h3>
-      <p>RGB PRO DDR4 32GB (2 x 16GB) 3600MHz CL18</p>
-      <p>Preço: R$799,00</p>
-      <a href="https://amzn.to/3xti7rR" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 23 -->
-  <div>
-    <div class="product">
-      <img src="webcam.jpg" alt="Produto 2">
-      <h3>Logitech C920s</h3>
-      <p>Gravações em Video Widescreen 1080p</p>
-      <p>Preço: R$430,00</p>
-      <a href="https://amzn.to/45HLeoc" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 24 -->
-  <div>
-    <div class="product">
-      <img src="mesa digitalizadora.jpg" alt="Produto 2">
-      <h3>Mesa Digitalizadora</h3>
-      <p> Criativa 10" Plus Multi - MX002</p>
-      <p>Preço: R$329,90</p>
-      <a href="https://amzn.to/3VQIzoS" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-     <!-- Produto 25 -->
-  <div>
-    <div class="product">
-      <img src="Caixa de som.jpg" alt="Produto 2">
-      <h3>JBL</h3>
-      <p>Caixa de Som,Bluetooth Go - Preta</p>
-      <p>Preço: R$189,00</p>
-      <a href="https://amzn.to/4c87VV1" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 26 -->
-  <div>
-    <div class="product">
-      <img src="64gb corsair.jpg" alt="Produto 2">
-      <h3>Corsair Memória</h3>
-      <p>64GB (2x 32GB) DDR4 3200</p>
-      <p>Preço: R$999,00</p>
-      <a href="https://amzn.to/4bBlknq" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 27 -->
-  <div>
-    <div class="product">
-      <img src="headset havit.jpg" alt="Produto 2">
-      <h3>Fone Gamer</h3>
-      <p>Headset Havit H2015D Pc/Xbox/Ps4/Ps5</p>
-      <p>Preço: R$149,00</p>
-      <a href="https://amzn.to/3F1zbbY" target="_blank" class="button">Mais Detalhes</a>
-    </div>
-    </div>
-    <!-- Produto 28 -->
-  <div>
-  <div class="product">
-    <img src="Led.jpg" alt="Produto 2">
-    <h3>Kit Completo Anel de Luz</h3>
-    <p>LED Com Tripé</p>
-    <p>Preço: R$58,99</p>
-    <a href="https://amzn.to/46mJz7M" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 29 -->
-  <div>
-  <div class="product">
-    <img src="redragon.jpg" alt="Produto 2">
-    <h3>Teclado Redragon </h3>
-    <p>RGB Switch Marrom Branco</p>
-    <p>Preço: R$332,50</p>
-    <a href="https://amzn.to/3LCjB6u" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 30 -->
-  <div>
-    <div class="product">
-      <img src="espaço.png" alt="Produto 2">
-      <h3>Astronauta Luminária</h3>
-      <p>Projetor De Luz Estrela Galáxia Nebulosa</p>
-      <p>Preço: R$56,99</p>
-      <a href="https://s.shopee.com.br/50FKTqmUWj" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 31 -->
-  <div>
-    <div class="product">
-      <img src="fita2.jpeg" alt="Produto 2">
-      <h3>Fita Led Rgb 3528</h3>
-      <p>5m + Controle 300 Led Decoração</p>
-      <p>Preço: R$10,98</p>
-      <a href="https://s.shopee.com.br/7UwfT6Dc3W" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 32 -->
-  <div>
-    <div class="product">
-      <img src="Chaveiro.jpeg" alt="Produto 2">
-      <h3>Chaveiro de carro de metal modificado</h3>
-      <p>Pingente de chaveiro</p>
-      <p>Preço: R$8,99</p>
-      <a href="https://s.shopee.com.br/4KzdhWwvnn" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 33 -->
-  <div>
-    <div class="product">
-      <img src="lua.jpeg" alt="Produto 2">
-      <h3>Luminária De Lua Cheia</h3>
-      <p>3d Led Abajur Decoração</p>
-      <p>Preço: R$19,97</p>
-      <a href="https://s.shopee.com.br/8ACMGolHhi" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-   <!-- Produto 34 -->
-   <div>
-    <div class="product">
-      <img src="pedestal.jpg" alt="Produto 2">
-      <h3>Pedestal Suporte</h3>
-      <p>Mesa Articulado Para Microfone</p>
-      <p>Preço: R$58,25</p>
-      <a href="https://amzn.to/4clm14w" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- Produto 35 -->
-  <div>
-    <div class="product">
-      <img src="gtr quadro.jpeg" alt="Produto 2">
-      <h3>Quadros Decorativo </h3>
-      <p>Nissan Skyline Gtr R34 5 Peças Mdf Full Hd</p>
-      <p>Preço: R$29,90</p>
-      <a href="https://s.shopee.com.br/1qIn8UagYc" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-   <!-- Produto 36 -->
-   <div>
-    <div class="product">
-      <img src="mochila.jpeg" alt="Produto 2">
-      <h3>Mochila Masculina</h3>
-      <p>Estilosa e Moderna Impermeável Para Conforto</p>
-      <p>Preço: R$47,99</p>
-      <a href="https://s.shopee.com.br/9UiEHMrckk" target="_blank" class="button">Mais Detalhes</a>
-  </div>
-  </div>
-  <!-- paginas -->
-  <div>
-    <div class="product2">
-      <h3></h3>
-      <p></p>
-      <p></p>
-      <a href="https://stepbr123.github.io/lojastep/" class="button2">1</a>
-      <a href="https://stepbr123.github.io/pagina2/" class="button2">2</a>
-  </div>
-  </div>
+
+<!-- PAGINA 1 -->
+<div id="pagina1" class="product-container">
+
+<div class="product"><img src="Fifine a8.jpg"><h3>FiFine a8</h3><p class="price">R$292,99</p><a href="https://amzn.to/3x6OtIU" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Controle Xbox.jpg"><h3>Controle Xbox</h3><p class="price">R$415</p><a href="https://amzn.to/3KxKBDZ" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Machenike G5 Pro.jpg"><h3>Machenike G5 Pro</h3><p class="price">R$311</p><a href="https://amzn.to/42Lzmlv" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="alexa.jpg"><h3>Echo Dot 5</h3><p class="price">R$459</p><a href="https://amzn.to/45owudB" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="fonejbl.jpg"><h3>JBL C50HI</h3><p class="price">R$53</p><a href="https://amzn.to/4eg9lht" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Fire Tv.jpg"><h3>Fire TV Stick</h3><p class="price">R$332</p><a href="https://amzn.to/3QLo49L" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="iclamper.jpg"><h3>Clamper</h3><p class="price">R$69</p><a href="https://amzn.to/41DtTvY" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="projetor.jpg"><h3>Mini Projetor</h3><p class="price">R$287</p><a href="https://amzn.to/3KBPOuo" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="tws.jpg"><h3>TWS Philips</h3><p class="price">R$139</p><a href="https://amzn.to/4iqUySx" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="MemoriaRam.jpg"><h3>8GB RAM</h3><p class="price">R$147</p><a href="https://amzn.to/4aPcu52" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Processador.jpg"><h3>Ryzen 5 5500</h3><p class="price">R$590</p><a href="https://amzn.to/45xNUop" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="teclado.jpg"><h3>Teclado Redragon</h3><p class="price">R$349</p><a href="https://amzn.to/3Ky2B0O" target="_blank" class="button">Ver produto</a></div>
+
+
 
 </div>
+
+<!-- PAGINA 2 -->
+<div id="pagina2" class="product-container" style="display:none;">
+
+<div class="product"><img src="mousepad.jpg"><h3>Mousepad XL</h3><p class="price">R$69</p><a href="https://amzn.to/3KFPElu" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="1tb2.jpg"><h3>SSD 1TB</h3><p class="price">R$420</p><a href="https://amzn.to/41Ff9wK" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Fury memoria.jpg"><h3>HyperX 16GB</h3><p class="price">R$334</p><a href="https://amzn.to/4b4UJ1K" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Corsair.jpg"><h3>Corsair 16GB</h3><p class="price">R$549</p><a href="https://amzn.to/4c5gX57" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Placa mãe.jpg"><h3>B550M</h3><p class="price">R$929</p><a href="https://amzn.to/4cqVKSW" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Fonte.jpg"><h3>Fonte 650W</h3><p class="price">R$424</p><a href="https://amzn.to/4c4T5i0" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Mouse.jpg"><h3>Logitech G PRO</h3><p class="price">R$609</p><a href="https://amzn.to/4cuWnur" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="qk6.jpg"><h3>QKZ AK6</h3><p class="price">R$29</p><a href="https://amzn.to/3VtKazn" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Monitor.jpg"><h3>AOC 24"</h3><p class="price">R$1088</p><a href="https://amzn.to/3Xu3eQC" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="32gb.jpg"><h3>Corsair 32GB</h3><p class="price">R$799</p><a href="https://amzn.to/3xti7rR" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="webcam.jpg"><h3>Logitech C920</h3><p class="price">R$430</p><a href="https://amzn.to/45HLeoc" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="mesa digitalizadora.jpg"><h3>Mesa Digitalizadora</h3><p class="price">R$329</p><a href="https://amzn.to/3VQIzoS" target="_blank" class="button">Ver produto</a></div>
+
+</div>
+
+<!-- PAGINA 3 -->
+<div id="pagina3" class="product-container" style="display:none;">
+
+<div class="product"><img src="Caixa de som.jpg"><h3>JBL Go</h3><p class="price">R$189</p><a href="https://amzn.to/4c87VV1" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="64gb corsair.jpg"><h3>Corsair 64GB</h3><p class="price">R$999</p><a href="https://amzn.to/4bBlknq" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="headset havit.jpg"><h3>Headset Havit</h3><p class="price">R$149</p><a href="https://amzn.to/3F1zbbY" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Led.jpg"><h3>Ring Light</h3><p class="price">R$58</p><a href="https://amzn.to/46mJz7M" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="redragon.jpg"><h3>Redragon Branco</h3><p class="price">R$332</p><a href="https://amzn.to/3LCjB6u" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="espaço.png"><h3>Astronauta LED</h3><p class="price">R$56</p><a href="https://s.shopee.com.br/50FKTqmUWj" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="fita2.jpeg"><h3>Fita LED</h3><p class="price">R$10</p><a href="https://s.shopee.com.br/7UwfT6Dc3W" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="Chaveiro.jpeg"><h3>Chaveiro</h3><p class="price">R$8</p><a href="https://s.shopee.com.br/4KzdhWwvnn" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="lua.jpeg"><h3>Luminária Lua</h3><p class="price">R$19</p><a href="https://s.shopee.com.br/8ACMGolHhi" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="pedestal.jpg"><h3>Pedestal Mic</h3><p class="price">R$58</p><a href="https://amzn.to/4clm14w" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="gtr quadro.jpeg"><h3>Quadro GTR</h3><p class="price">R$29</p><a href="https://s.shopee.com.br/1qIn8UagYc" target="_blank" class="button">Ver produto</a></div>
+<div class="product"><img src="mochila.jpeg"><h3>Mochila</h3><p class="price">R$47</p><a href="https://s.shopee.com.br/9UiEHMrckk" target="_blank" class="button">Ver produto</a></div>
+
+</div>
+
+<div class="pagination">
+  <button onclick="trocarPagina(1)">1</button>
+  <button onclick="trocarPagina(2)">2</button>
+  <button onclick="trocarPagina(3)">3</button>
+</div>
+
+<script>
+function trocarPagina(pagina) {
+  document.getElementById("pagina1").style.display = "none";
+  document.getElementById("pagina2").style.display = "none";
+  document.getElementById("pagina3").style.display = "none";
+
+  document.getElementById("pagina" + pagina).style.display = "flex";
+}
+
+const searchInput = document.getElementById("searchInput");
+const paginas = [
+  document.getElementById("pagina1"),
+  document.getElementById("pagina2"),
+  document.getElementById("pagina3")
+];
+
+searchInput.addEventListener("keyup", function() {
+  const value = this.value.toLowerCase();
+  let encontrou = false;
+
+  paginas.forEach((pagina, index) => {
+    const produtos = pagina.querySelectorAll(".product");
+
+    produtos.forEach(produto => {
+      const texto = produto.innerText.toLowerCase();
+
+      if (texto.includes(value)) {
+        produto.style.display = "block";
+
+        if (!encontrou) {
+          trocarPagina(index + 1); // muda pra página certa
+          encontrou = true;
+        }
+      } else {
+        produto.style.display = "none";
+      }
+    });
+  });
+
+  // Se apagar a busca, volta pra página 1 e mostra tudo
+  if (value === "") {
+    paginas.forEach(pagina => {
+      const produtos = pagina.querySelectorAll(".product");
+      produtos.forEach(produto => produto.style.display = "block");
+    });
+    trocarPagina(1);
+  }
+});
+</script>
 
 </body>
 </html>
